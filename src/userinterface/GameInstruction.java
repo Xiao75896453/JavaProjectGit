@@ -1,4 +1,4 @@
-package userinterface; //LAI ¹CÀ¸»¡©úµøµ¡
+package userinterface; //LAI ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,57 +20,29 @@ public class GameInstruction extends JFrame {
 	public GameInstruction() {
 
 		setTitle("Game Instruction");
-		setSize(600, 500); // ¹CÀ¸»¡©úµøµ¡¤j¤p
-		setBackground(Color.blue);
-
+		setSize(600, 500);  //è¦–çª—å¤§å°
+		setBackground(Color.blue); //I am wonder why not used!!!!!!!
+		
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setResizable(false); // ¨Ï¥ÎªÌ¬O§_¥i½Õµøµ¡¤j¤p
+		setResizable(false);  //ä½¿ç”¨è€…ä¸å¯è®Šæ›´è¦–çª—å¤§å°
 
 		String filePath = "data/textEN.txt";
 		System.out.println(readALLBytesJava7(filePath));
-		System.out.println(content.length());
-
-		//String[] tokens = content.split(";");
 		
 		JTextArea lab = new JTextArea();
 		lab.setText(content);
-		Font f = new Font("Serif",Font.BOLD,18);
+		Font f = new Font("Serif",Font.BOLD,18); //å­—é«”ã€å­—å‹ è¨­å®š
 		lab.setFont(f);
 		add(lab);
-//		for (String token : tokens) {
-//			System.out.println(token);
-//			
-//			lab.setSize(150, 50);
-//			lab.setLocation(0, 20 + i * 50);
-//			i++;
-//		}
-
-//		for (int i = 0; i < 220; i += 22) {
-//			
-//			str = content.substring(i, i + 22);
-//			JLabel lab = new JLabel(str + "\n");
-//			lab.setSize(150,50);
-//			lab.setLocation(0 ,20*(int)(i/21));
-//			lab.setBackground(Color.magenta);
-//		
-//			
-//			//lab.setVisible(true);
-//			add(lab);
-//		}
 	}
 
-	private String readALLBytesJava7(String filePath) {
-
+	private String readALLBytesJava7(String filePath) {  
 		try {
-
 			content = new String(Files.readAllBytes(Paths.get(filePath)));
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		return content;
-
 	}
 
 }
