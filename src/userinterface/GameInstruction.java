@@ -33,7 +33,7 @@ public class GameInstruction extends JFrame {
 		
 		JTextArea lab = new JTextArea();
 		lab.setText(content);
-		lab.setBackground(Color.blue);
+		lab.setBackground(new Color(240, 245, 255));
 		Font f = new Font("Serif",Font.BOLD,18);
 		lab.setFont(f);
 		add(lab);
