@@ -1,4 +1,4 @@
-package userinterface; //LAI �C����������
+package userinterface; 
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,18 +20,18 @@ public class GameInstruction extends JFrame {
 	public GameInstruction() {
 
 		setTitle("Game Instruction");
-		setSize(600, 500); // �C�����������j�p
+		setSize(600, 500); //視窗大小
 
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setResizable(false);  //使用者不可變更視窗大小
 
-		String filePath = "data/textEN.txt";
-		System.out.println(readALLBytesJava7(filePath));
+		String filePath = "data/textEN.txt";  
+		System.out.println(readALLBytesJava7(filePath));  //讀取txt檔
 		
 		JTextArea lab = new JTextArea();
 		lab.setText(content);
-		lab.setBackground(new Color(240, 245, 255));
-		Font f = new Font("Serif",Font.BOLD,18);
+		lab.setBackground(new Color(240, 245, 255)); //設定遊戲說明視窗背景顏色
+		Font f = new Font("Serif",Font.BOLD,18);  //字型、字體
 		lab.setFont(f);
 		add(lab);
 	}
