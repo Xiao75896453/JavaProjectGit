@@ -1,4 +1,4 @@
-package userinterface; //LAI ¹CÀ¸»¡©úµøµ¡
+package userinterface; //LAI ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,11 +20,10 @@ public class GameInstruction extends JFrame {
 	public GameInstruction() {
 
 		setTitle("Game Instruction");
-		setSize(600, 500); // ¹CÀ¸»¡©úµøµ¡¤j¤p
-		setBackground(Color.blue);
+		setSize(600, 500); // ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½p
 
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setResizable(false); // ¨Ï¥ÎªÌ¬O§_¥i½Õµøµ¡¤j¤p
+		setResizable(false); // ï¿½Ï¥ÎªÌ¬Oï¿½_ï¿½iï¿½Õµï¿½ï¿½ï¿½ï¿½jï¿½p
 
 		String filePath = "data/textEN.txt";
 		System.out.println(readALLBytesJava7(filePath));
@@ -34,6 +33,7 @@ public class GameInstruction extends JFrame {
 		
 		JTextArea lab = new JTextArea();
 		lab.setText(content);
+		lab.setBackground(Color.blue);
 		Font f = new Font("Serif",Font.BOLD,18);
 		lab.setFont(f);
 		add(lab);
