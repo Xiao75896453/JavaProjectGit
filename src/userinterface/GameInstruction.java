@@ -20,9 +20,8 @@ public class GameInstruction extends JFrame {
 	public GameInstruction() {
 
 		setTitle("Game Instruction");
-		setSize(600, 500);  //視窗大小
-		setBackground(Color.blue); //I am wonder why not used!!!!!!!
-		
+		setSize(600, 500); // �C�����������j�p
+
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setResizable(false);  //使用者不可變更視窗大小
 
@@ -31,7 +30,8 @@ public class GameInstruction extends JFrame {
 		
 		JTextArea lab = new JTextArea();
 		lab.setText(content);
-		Font f = new Font("Serif",Font.BOLD,18); //字體、字型 設定
+		lab.setBackground(new Color(240, 245, 255));
+		Font f = new Font("Serif",Font.BOLD,18);
 		lab.setFont(f);
 		add(lab);
 	}
