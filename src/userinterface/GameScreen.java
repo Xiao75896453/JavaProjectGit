@@ -343,25 +343,19 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		}
 	}
 	private void calEatTime() {
-		if (eatTime > 600 && eatTime < 1000) {
-			if ((eatTime % 60) == 0) {
-				if ((eatTime / 60) % 2 == 0) {
-					if (charType == "dns") {
-						mainCharacter.Role(evDnsImg);
-					} else if (charType == "tot") {
-						mainCharacter.Role(evTotImg);
-					}
-					charDrawType = 1;
-				} else {
-					if (charType == "dns") {
-						mainCharacter.Role(dnsImg);
-					} else if (charType == "tot") {
-						mainCharacter.Role(totImg);
-					}
-					charDrawType = 0;
-				}
-			}
-		}
+		 if (eatTime < 1000) {
+		     eatTime += 1;
+		    } else {
+		     eatTime = 0;
+		     if (charType == "dns") {
+		      mainCharacter.Role(dnsImg);
+		     } else if (charType == "tot") {
+		      mainCharacter.Role(totImg);
+		     }
+		     charDrawType = 0;
+		     isEAT = false;
+		     dnsEV = false;
+		    }
 	}
 
 }
