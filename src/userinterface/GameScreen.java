@@ -55,10 +55,41 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	private boolean flicker = false;
 	private JPanel background;
 	private BufferedImage backgroundImage;
-	private String[] backgroundPath = { "data/background1.png", "data/background2.png", "data/background3.png",
-			"data/background4.png" };
+	String background1FilePath = "data/background1.png"; // 背景圖1路徑
+	String background2FilePath = "data/background2.png"; // 背景圖2路徑
+	String background3FilePath = "data/background3.png"; // 背景圖3路徑
+	String background4FilePath = "data/background4.png"; // 背景圖4路徑
+
+	String lightCharacter1Dns = "data/evmain-character1.png"; // 發光 恐龍 1
+	String lightCharacter2Dns = "data/evmain-character2.png"; // 發光 恐龍 2
+	String lightCharacter3Dns = "data/evmain-character3.png"; // 發光 恐龍 3
+	String lightCharacter4Dns = "data/evmain-character4.png"; // 發光 恐龍 4
+	String lightCharacter5Dns = "data/evmain-character5.png"; // 發光 恐龍 5
+	String lightCharacter6Dns = "data/evmain-character6.png"; // 發光 恐龍 6
+
+	String lightCharacter1Tot = "data/evtotoro1.png"; // 發光 豆豆龍 1
+	String lightCharacter2Tot = "data/evtotoro2.png"; // 發光 豆豆龍 2
+	String lightCharacter6Tot = "data/evtotoro6.png"; // 發光 豆豆龍 6
+	String lightCharacter4Tot = "data/totoro4.png"; // 發光 豆豆龍 4
+	String lightCharacter5Tot = "data/evtotoro5.png"; // 發光 豆豆龍 5
+
+	String Character1Dns = "data/main-character1.png"; // 恐龍 1
+	String Character2Dns = "data/main-character2.png"; // 恐龍 2
+	String Character3Dns = "data/main-character3.png"; // 恐龍 3
+	String Character4Dns = "data/main-character4.png"; // 恐龍 4
+	String Character5Dns = "data/main-character5.png"; // 恐龍 5
+	String Character6Dns = "data/main-character6.png"; // 恐龍 6
+
+	String Character1Tot = "data/totoro1.png"; // 豆豆龍 1
+	String Character2Tot = "data/totoro2.png"; // 豆豆龍 2
+	String Character4Tot = "data/totoro4.png"; // 豆豆龍 4
+	String Character5Tot = "data/totoro5.png"; // 豆豆龍 5
+	String Character6Tot = "data/totoro6.png"; // 豆豆龍 6
+
+	private String[] backgroundPath = { background1FilePath, background2FilePath, background3FilePath,
+			background4FilePath };
 	private AudioClip BGM;
-	
+
 	// !!!!!!!!!!!!!!!!
 	public GameScreen() {
 		mainCharacter = new MainCharacter();
@@ -69,9 +100,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		enemiesManager = new EnemiesManager(mainCharacter);
 		clouds = new Clouds(GameWindow.SCREEN_WIDTH, mainCharacter);
 		gameInstruction = new GameInstruction();
-		gameInstruction.setVisible(true);
-		
-		
+
 		try {
 			backgroundImage = ImageIO.read(new File(backgroundPath[0]));
 			BGM = Applet.newAudioClip(new URL("file", "", "data/BGM.wav"));
@@ -79,7 +108,6 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 
 	public void startGame() {
@@ -99,14 +127,12 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 				mainCharacter.playDeadSound();
 				gameState = GAME_OVER_STATE;
 				mainCharacter.dead(true);
-			}
-			else if (enemiesManager.isCollision() == "EAT") {
+			} else if (enemiesManager.isCollision() == "EAT") {
 				mainCharacter.playEatFoodSound();
 				isEAT = true;
 				charDrawType = 1;
-				
 			}
-			
+
 			if (mainCharacter.score > maxScore) {
 				maxScore = mainCharacter.score;
 			}
@@ -119,15 +145,15 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 					e.printStackTrace();
 				}
 			}
+
 			if (isEAT == true) {
 				if (dnsEV == false) {
 					if (charType == "dns") {
-						mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-								"data/evmain-character3.png", "data/evmain-character4.png",
-								"data/evmain-character5.png", "data/evmain-character6.png");
+						mainCharacter.Role(lightCharacter1Dns, lightCharacter2Dns, lightCharacter3Dns,
+								lightCharacter4Dns, lightCharacter5Dns, lightCharacter6Dns);
 					} else if (charType == "tot") {
-						mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-								"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
+						mainCharacter.Role(lightCharacter1Tot, lightCharacter2Tot, lightCharacter6Tot,
+								lightCharacter4Tot, lightCharacter5Tot, lightCharacter5Tot);
 					}
 					dnsEV = true;
 				}
@@ -135,22 +161,20 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 					if ((eatTime % 60) == 0) {
 						if ((eatTime / 60) % 2 == 0) {
 							if (charType == "dns") {
-								mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-										"data/evmain-character3.png", "data/evmain-character4.png",
-										"data/evmain-character5.png", "data/evmain-character6.png");
+								mainCharacter.Role(lightCharacter1Dns, lightCharacter2Dns, lightCharacter3Dns,
+										lightCharacter4Dns, lightCharacter5Dns, lightCharacter6Dns);
 							} else if (charType == "tot") {
-								mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-										"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
+								mainCharacter.Role(lightCharacter1Tot, lightCharacter2Tot, lightCharacter6Tot,
+										lightCharacter4Tot, lightCharacter5Tot, lightCharacter5Tot);
 							}
 							charDrawType = 1;
 						} else {
 							if (charType == "dns") {
-								mainCharacter.Role("data/main-character1.png", "data/main-character2.png",
-										"data/main-character3.png", "data/main-character4.png",
-										"data/main-character5.png", "data/main-character6.png");
+								mainCharacter.Role(Character1Dns, Character2Dns, Character3Dns, Character4Dns,
+										Character5Dns, Character6Dns);
 							} else if (charType == "tot") {
-								mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
-										"data/totoro4.png", "data/totoro5.png", "data/totoro5.png");
+								mainCharacter.Role(Character1Tot, Character2Tot, Character6Tot, Character4Tot,
+										Character5Tot, Character5Tot);
 							}
 							charDrawType = 0;
 						}
@@ -161,12 +185,11 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 				} else {
 					eatTime = 0;
 					if (charType == "dns") {
-						mainCharacter.Role("data/main-character1.png", "data/main-character2.png",
-								"data/main-character3.png", "data/main-character4.png", "data/main-character5.png",
-								"data/main-character6.png");
+						mainCharacter.Role(Character1Dns, Character2Dns, Character3Dns, Character4Dns, Character5Dns,
+								Character6Dns);
 					} else if (charType == "tot") {
-						mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
-								"data/totoro4.png", "data/totoro5.png", "data/totoro5.png");
+						mainCharacter.Role(Character1Tot, Character2Tot, Character6Tot, Character4Tot, Character5Tot,
+								Character5Tot);
 					}
 					charDrawType = 0;
 					isEAT = false;
@@ -192,8 +215,8 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 			gameState = START_GAME_STATE;
 			break;
 		case CHANGEROLE1: /// LAN
-			mainCharacter.Role("data/main-character1.png", "data/main-character2.png", "data/main-character3.png",
-					"data/main-character4.png", "data/main-character5.png", "data/main-character6.png");
+			mainCharacter.Role(Character1Dns, Character2Dns, Character3Dns, Character4Dns, Character5Dns,
+					Character6Dns);
 			mainCharacter.draw(g, charDrawType);
 			gameState = START_GAME_STATE;
 			break;
@@ -275,17 +298,16 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 				if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 					gameState = GAME_PLAYING_STATE;
 				}
-				if (e.getKeyCode() == KeyEvent.VK_Z) { /// LAN
+				if (e.getKeyCode() == KeyEvent.VK_Z) { // LAN
 					charType = "tot";
 					gameState = CHANGEROLE;
 				}
-				if (e.getKeyCode() == KeyEvent.VK_X) { /// LAN
+				if (e.getKeyCode() == KeyEvent.VK_X) { // LAN
 					charType = "dns";
 					gameState = CHANGEROLE1;
 				}
-				if (e.getKeyCode() == KeyEvent.VK_LEFT) // LAI ������V�� �}�һ���
+				if (e.getKeyCode() == KeyEvent.VK_LEFT) // LAI
 				{
-
 					gameInstruction.setVisible(true);
 				}
 				break;
@@ -309,12 +331,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 					charType = "dns";
 					gameState = CHANGEROLE1;
 				}
-				if (e.getKeyCode() == KeyEvent.VK_LEFT) // LAI ������V�� �}�һ���
-				{
-					gameInstruction.setVisible(true);
-				}
 				break;
-
 			}
 		}
 	}
@@ -332,7 +349,6 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
-
 	}
 
 	private void resetGame() {
@@ -344,5 +360,4 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		mainCharacter.score = 0;
 		// !!!!!!!!
 	}
-
 }
