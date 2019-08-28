@@ -27,6 +27,7 @@ public class Cactus extends Enemy {
 		rectBound = new Rectangle();
 	}
 	
+	//更新位置
 	public void update() {
 		posX -= mainCharacter.getSpeedX();
 	}
@@ -38,6 +39,7 @@ public class Cactus extends Enemy {
 //		g.drawRect(bound.x, bound.y, bound.width, bound.height);
 	}
 	
+	
 	public Rectangle getBound() {
 		rectBound = new Rectangle();
 		rectBound.x = (int) posX + (image.getWidth() - width)/2;
@@ -46,7 +48,7 @@ public class Cactus extends Enemy {
 		rectBound.height = height;
 		return rectBound;
 	}
-
+	
 	@Override
 	public boolean isOutOfScreen() {
 		if(posX < -image.getWidth()) {

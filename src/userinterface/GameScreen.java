@@ -57,6 +57,16 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	private BufferedImage backgroundImage;
 	private String[] backgroundPath = { "data/background1.png", "data/background2.png", "data/background3.png",
 			"data/background4.png" };
+	private String[] dnsImg = { "data/main-character1.png", "data/main-character2.png",
+			"data/main-character3.png", "data/main-character4.png",
+			"data/main-character5.png", "data/main-character6.png" };
+	private String[] evDnsImg = { "data/evmain-character1.png", "data/evmain-character2.png",
+			"data/evmain-character3.png", "data/evmain-character4.png",
+			"data/evmain-character5.png", "data/evmain-character6.png" };	
+	private String[] totImg = {"data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
+			"data/totoro4.png", "data/totoro5.png", "data/totoro5.png" };
+	private String[] evTotImg = {"data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
+			"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png"};
 	private AudioClip BGM;
 	
 	// !!!!!!!!!!!!!!!!
@@ -117,14 +127,12 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		switch (gameState) {
 
 		case CHANGEROLE: /// LAN
-			mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png", "data/totoro4.png",
-					"data/totoro5.png", "data/totoro5.png");
+			mainCharacter.Role(totImg);
 			mainCharacter.draw(g, charDrawType);
 			gameState = START_GAME_STATE;
 			break;
 		case CHANGEROLE1: /// LAN
-			mainCharacter.Role("data/main-character1.png", "data/main-character2.png", "data/main-character3.png",
-					"data/main-character4.png", "data/main-character5.png", "data/main-character6.png");
+			mainCharacter.Role(dnsImg);
 			mainCharacter.draw(g, charDrawType);
 			gameState = START_GAME_STATE;
 			break;
@@ -306,12 +314,9 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	private void evolution(){
 		if (dnsEV == false) {
 			if (charType == "dns") {
-				mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-						"data/evmain-character3.png", "data/evmain-character4.png",
-						"data/evmain-character5.png", "data/evmain-character6.png");
+				mainCharacter.Role(evDnsImg);
 			} else if (charType == "tot") {
-				mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-						"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
+				mainCharacter.Role(evTotImg);
 			}
 			dnsEV = true;
 		}
@@ -321,22 +326,16 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 			if ((eatTime % 60) == 0) {
 				if ((eatTime / 60) % 2 == 0) {
 					if (charType == "dns") {
-						mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-								"data/evmain-character3.png", "data/evmain-character4.png",
-								"data/evmain-character5.png", "data/evmain-character6.png");
+						mainCharacter.Role(evDnsImg);
 					} else if (charType == "tot") {
-						mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-								"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
+						mainCharacter.Role(evTotImg);
 					}
 					charDrawType = 1;
 				} else {
 					if (charType == "dns") {
-						mainCharacter.Role("data/main-character1.png", "data/main-character2.png",
-								"data/main-character3.png", "data/main-character4.png",
-								"data/main-character5.png", "data/main-character6.png");
+						mainCharacter.Role(dnsImg);
 					} else if (charType == "tot") {
-						mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
-								"data/totoro4.png", "data/totoro5.png", "data/totoro5.png");
+						mainCharacter.Role(totImg);
 					}
 					charDrawType = 0;
 				}
@@ -348,22 +347,16 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 			if ((eatTime % 60) == 0) {
 				if ((eatTime / 60) % 2 == 0) {
 					if (charType == "dns") {
-						mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-								"data/evmain-character3.png", "data/evmain-character4.png",
-								"data/evmain-character5.png", "data/evmain-character6.png");
+						mainCharacter.Role(evDnsImg);
 					} else if (charType == "tot") {
-						mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-								"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
+						mainCharacter.Role(evTotImg);
 					}
 					charDrawType = 1;
 				} else {
 					if (charType == "dns") {
-						mainCharacter.Role("data/main-character1.png", "data/main-character2.png",
-								"data/main-character3.png", "data/main-character4.png",
-								"data/main-character5.png", "data/main-character6.png");
+						mainCharacter.Role(dnsImg);
 					} else if (charType == "tot") {
-						mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
-								"data/totoro4.png", "data/totoro5.png", "data/totoro5.png");
+						mainCharacter.Role(totImg);
 					}
 					charDrawType = 0;
 				}
