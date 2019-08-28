@@ -42,19 +42,19 @@ public class GameWindow extends JFrame {
 		Thread.sleep(3000);
 	}
 	public static Clip createClip(File path) {
-		//指定されたURLのオーディオ入力ストリームを取得
+		//取得欲輸入音頻的URL
 		try (AudioInputStream ais = AudioSystem.getAudioInputStream(path)){
 			
-			//ファイルの形式取得
+			//取得文件格式
 			AudioFormat af = ais.getFormat();
 			
-			//単一のオーディオ形式を含む指定した情報からデータラインの情報オブジェクトを構築
+			//從單一音頻數據格式建構新對象
 			DataLine.Info dataLine = new DataLine.Info(Clip.class,af);
 			
-			//指定された Line.Info オブジェクトの記述に一致するラインを取得
+			//獲取與指定的Line.Info的對象進行匹配
 			Clip c = (Clip)AudioSystem.getLine(dataLine);
 			
-			//再生準備完了
+			//準備完了
 			c.open(ais);
 			
 			return c;

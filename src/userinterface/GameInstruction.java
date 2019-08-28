@@ -1,4 +1,4 @@
-package userinterface; //LAI ¹CÀ¸»¡©úµøµ¡
+package userinterface; //LAI ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 import java.awt.Color;
 import java.awt.Font;
@@ -20,11 +20,11 @@ public class GameInstruction extends JFrame {
 	public GameInstruction() {
 
 		setTitle("Game Instruction");
-		setSize(600, 500); // ¹CÀ¸»¡©úµøµ¡¤j¤p
+		setSize(600, 500); // ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½p
 		setBackground(Color.blue);
 
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setResizable(false); // ¨Ï¥ÎªÌ¬O§_¥i½Õµøµ¡¤j¤p
+		setResizable(false); // ï¿½Ï¥ÎªÌ¬Oï¿½_ï¿½iï¿½Õµï¿½ï¿½ï¿½ï¿½jï¿½p
 
 		String filePath = "data/textEN.txt";
 		System.out.println(readALLBytesJava7(filePath));
@@ -37,26 +37,7 @@ public class GameInstruction extends JFrame {
 		Font f = new Font("Serif",Font.BOLD,18);
 		lab.setFont(f);
 		add(lab);
-//		for (String token : tokens) {
-//			System.out.println(token);
-//			
-//			lab.setSize(150, 50);
-//			lab.setLocation(0, 20 + i * 50);
-//			i++;
-//		}
 
-//		for (int i = 0; i < 220; i += 22) {
-//			
-//			str = content.substring(i, i + 22);
-//			JLabel lab = new JLabel(str + "\n");
-//			lab.setSize(150,50);
-//			lab.setLocation(0 ,20*(int)(i/21));
-//			lab.setBackground(Color.magenta);
-//		
-//			
-//			//lab.setVisible(true);
-//			add(lab);
-//		}
 	}
 
 	private String readALLBytesJava7(String filePath) {

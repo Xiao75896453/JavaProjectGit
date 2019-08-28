@@ -309,11 +309,11 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 					charType = "dns";
 					gameState = CHANGEROLE1;
 				}
-				if (e.getKeyCode() == KeyEvent.VK_LEFT) // LAI ������V�� �}�һ���
+				/*if (e.getKeyCode() == KeyEvent.VK_LEFT) // LAI ������V�� �}�һ���
 				{
 					gameInstruction.setVisible(true);
 				}
-				break;
+				break;*/
 
 			}
 		}
