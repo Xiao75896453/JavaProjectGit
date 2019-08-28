@@ -29,7 +29,7 @@ public class GameInstruction extends JFrame {
 		JTextArea lab = new JTextArea();
 		lab.setEditable(false); // 不可更動視窗內容
 		lab.setText(content);
-		lab.setBackground(new Color(240, 245, 255));  // 視窗背景顏色
+		lab.setBackground(new Color(240, 245, 255)); // 視窗背景顏色
 		Font f = new Font("Serif", Font.BOLD, 18);
 		lab.setFont(f);
 		add(lab);

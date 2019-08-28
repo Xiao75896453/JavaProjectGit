@@ -54,5 +54,4 @@ public class Cactus extends Enemy {
 		}
 		return false;
 	}
-	
 }

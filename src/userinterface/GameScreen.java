@@ -14,7 +14,8 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import gameobject.Clouds;
+import gameobject.Airplanes;
+import gameobject.Airplanes;
 import gameobject.EnemiesManager;
 import gameobject.Land;
 import gameobject.MainCharacter;
@@ -37,7 +38,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	// private Land land;
 	private MainCharacter mainCharacter;
 	private EnemiesManager enemiesManager;
-	private Clouds clouds;
+	private Airplanes airplanes;
 	private Thread thread;
 
 	private boolean isKeyPressed;
@@ -55,6 +56,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	private boolean flicker = false;
 	private JPanel background;
 	private BufferedImage backgroundImage;
+	
 	String background1FilePath = "data/background1.png"; // 背景圖1路徑
 	String background2FilePath = "data/background2.png"; // 背景圖2路徑
 	String background3FilePath = "data/background3.png"; // 背景圖3路徑
@@ -98,7 +100,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		replayButtonImage = Resource.getResouceImage("data/replay_button.png");
 		gameOverButtonImage = Resource.getResouceImage("data/gameover_text.png");
 		enemiesManager = new EnemiesManager(mainCharacter);
-		clouds = new Clouds(GameWindow.SCREEN_WIDTH, mainCharacter);
+		airplanes = new Airplanes(GameWindow.SCREEN_WIDTH, mainCharacter);
 		gameInstruction = new GameInstruction();
 
 		try {
@@ -118,7 +120,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 
 	public void gameUpdate() {
 		if (gameState == GAME_PLAYING_STATE) {
-			clouds.update();
+			airplanes.update();
 			// land.update();
 			mainCharacter.update();
 			enemiesManager.update();
@@ -137,7 +139,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 				maxScore = mainCharacter.score;
 			}
 			if (mainCharacter.score % 100 == 80) {
-				clouds.changeCloud((mainCharacter.score / 160) % 6);
+				airplanes.changeAirplane((mainCharacter.score / 160) % 6);
 				try {
 					backgroundImage = ImageIO.read(new File(backgroundPath[(mainCharacter.score / 100) % 4]));
 				} catch (IOException e) {
@@ -226,7 +228,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		case GAME_PLAYING_STATE:
 
 		case GAME_OVER_STATE:
-			clouds.draw(g);
+			airplanes.draw(g);
 			// land.draw(g);
 			enemiesManager.draw(g);
 			mainCharacter.draw(g, charDrawType);
