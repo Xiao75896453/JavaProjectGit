@@ -36,37 +36,9 @@ public class GameWindow extends JFrame {
 	}
 	
 	public static void main(String args[])throws Exception {
-		Clip clip = createClip(new File("data/BGM.wav"));
+		GameBackgroundMusic BGM = new GameBackgroundMusic();
+		BGM.setFile(new File("data/BGM.wav")).start();
 		(new GameWindow()).startGame();
-		clip.start();
 		Thread.sleep(3000);
-	}
-	public static Clip createClip(File path) {
-		//取得欲輸入音頻的URL
-		try (AudioInputStream ais = AudioSystem.getAudioInputStream(path)){
-			
-			//取得文件格式
-			AudioFormat af = ais.getFormat();
-			
-			//從單一音頻數據格式建構新對象
-			DataLine.Info dataLine = new DataLine.Info(Clip.class,af);
-			
-			//獲取與指定的Line.Info的對象進行匹配
-			Clip c = (Clip)AudioSystem.getLine(dataLine);
-			
-			//準備完了
-			c.open(ais);
-			
-			return c;
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		} catch (UnsupportedAudioFileException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (LineUnavailableException e) {
-			e.printStackTrace();
-		}
-		return null;
 	}
 }
