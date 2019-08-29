@@ -57,6 +57,16 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	private BufferedImage backgroundImage;
 	private String[] backgroundPath = { "data/background1.png", "data/background2.png", "data/background3.png",
 			"data/background4.png" };
+	private String[] dnsImg = { "data/main-character1.png", "data/main-character2.png",
+			"data/main-character3.png", "data/main-character4.png",
+			"data/main-character5.png", "data/main-character6.png" };
+	private String[] evDnsImg = { "data/evmain-character1.png", "data/evmain-character2.png",
+			"data/evmain-character3.png", "data/evmain-character4.png",
+			"data/evmain-character5.png", "data/evmain-character6.png" };	
+	private String[] totImg = {"data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
+			"data/totoro4.png", "data/totoro5.png", "data/totoro5.png" };
+	private String[] evTotImg = {"data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
+			"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png"};
 	private AudioClip BGM;
 	
 	// !!!!!!!!!!!!!!!!
@@ -91,89 +101,20 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 	public void gameUpdate() {
 		if (gameState == GAME_PLAYING_STATE) {
 			clouds.update();
-			// land.update();
 			mainCharacter.update();
 			enemiesManager.update();
-			// !!!!!!!!!!
-			if (enemiesManager.isCollision() == "DEATH" && isEAT == false) {
-				mainCharacter.playDeadSound();
-				gameState = GAME_OVER_STATE;
-				mainCharacter.dead(true);
-			}
-			else if (enemiesManager.isCollision() == "EAT") {
-				mainCharacter.playEatFoodSound();
-				isEAT = true;
-				charDrawType = 1;
-				
-			}
+
+			isCollision();
 			
-			if (mainCharacter.score > maxScore) {
-				maxScore = mainCharacter.score;
-			}
-			if (mainCharacter.score % 100 == 80) {
-				clouds.changeCloud((mainCharacter.score / 160) % 6);
-				try {
-					backgroundImage = ImageIO.read(new File(backgroundPath[(mainCharacter.score / 100) % 4]));
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
+			updateMaxScore();
+			
+			changeBackground();
+			
 			if (isEAT == true) {
-				if (dnsEV == false) {
-					if (charType == "dns") {
-						mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-								"data/evmain-character3.png", "data/evmain-character4.png",
-								"data/evmain-character5.png", "data/evmain-character6.png");
-					} else if (charType == "tot") {
-						mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-								"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
-					}
-					dnsEV = true;
-				}
-				if (eatTime > 600 && eatTime < 1000) {
-					if ((eatTime % 60) == 0) {
-						if ((eatTime / 60) % 2 == 0) {
-							if (charType == "dns") {
-								mainCharacter.Role("data/evmain-character1.png", "data/evmain-character2.png",
-										"data/evmain-character3.png", "data/evmain-character4.png",
-										"data/evmain-character5.png", "data/evmain-character6.png");
-							} else if (charType == "tot") {
-								mainCharacter.Role("data/evtotoro1.png", "data/evtotoro2.png", "data/evtotoro6.png",
-										"data/totoro4.png", "data/evtotoro5.png", "data/evtotoro5.png");
-							}
-							charDrawType = 1;
-						} else {
-							if (charType == "dns") {
-								mainCharacter.Role("data/main-character1.png", "data/main-character2.png",
-										"data/main-character3.png", "data/main-character4.png",
-										"data/main-character5.png", "data/main-character6.png");
-							} else if (charType == "tot") {
-								mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
-										"data/totoro4.png", "data/totoro5.png", "data/totoro5.png");
-							}
-							charDrawType = 0;
-						}
-					}
-				}
-				if (eatTime < 1000) {
-					eatTime += 1;
-				} else {
-					eatTime = 0;
-					if (charType == "dns") {
-						mainCharacter.Role("data/main-character1.png", "data/main-character2.png",
-								"data/main-character3.png", "data/main-character4.png", "data/main-character5.png",
-								"data/main-character6.png");
-					} else if (charType == "tot") {
-						mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png",
-								"data/totoro4.png", "data/totoro5.png", "data/totoro5.png");
-					}
-					charDrawType = 0;
-					isEAT = false;
-					dnsEV = false;
-				}
+				evolution();
+				flicker();
+				calEatTime();
 			}
-			// !!!!!!!!!!
 		}
 	}
 
@@ -186,14 +127,12 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		switch (gameState) {
 
 		case CHANGEROLE: /// LAN
-			mainCharacter.Role("data/totoro1.png", "data/totoro2.png", "data/totoro6.png", "data/totoro4.png",
-					"data/totoro5.png", "data/totoro5.png");
+			mainCharacter.Role(totImg);
 			mainCharacter.draw(g, charDrawType);
 			gameState = START_GAME_STATE;
 			break;
 		case CHANGEROLE1: /// LAN
-			mainCharacter.Role("data/main-character1.png", "data/main-character2.png", "data/main-character3.png",
-					"data/main-character4.png", "data/main-character5.png", "data/main-character6.png");
+			mainCharacter.Role(dnsImg);
 			mainCharacter.draw(g, charDrawType);
 			gameState = START_GAME_STATE;
 			break;
@@ -343,6 +282,80 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		dnsRunSpeed = 4;
 		mainCharacter.score = 0;
 		// !!!!!!!!
+	}
+	private void isCollision() {
+		if (enemiesManager.isCollision() == "DEATH" && isEAT == false) {
+			mainCharacter.playDeadSound();
+			gameState = GAME_OVER_STATE;
+			mainCharacter.dead(true);
+		}
+		else if (enemiesManager.isCollision() == "EAT") {
+			mainCharacter.playEatFoodSound();
+			isEAT = true;
+			charDrawType = 1;				
+		}
+	}
+	private void updateMaxScore() {
+		if (mainCharacter.score > maxScore) {
+			maxScore = mainCharacter.score;
+		}
+	}
+	private void changeBackground() {
+		if (mainCharacter.score % 100 == 80) {
+			clouds.changeCloud((mainCharacter.score / 160) % 6);
+			try {
+				backgroundImage = ImageIO.read(new File(backgroundPath[(mainCharacter.score / 100) % 4]));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	private void evolution(){
+		if (dnsEV == false) {
+			if (charType == "dns") {
+				mainCharacter.Role(evDnsImg);
+			} else if (charType == "tot") {
+				mainCharacter.Role(evTotImg);
+			}
+			dnsEV = true;
+		}
+	}
+	private void flicker() {
+		if (eatTime > 600 && eatTime < 1000) {
+			if ((eatTime % 60) == 0) {
+				if ((eatTime / 60) % 2 == 0) {
+					if (charType == "dns") {
+						mainCharacter.Role(evDnsImg);
+					} else if (charType == "tot") {
+						mainCharacter.Role(evTotImg);
+					}
+					charDrawType = 1;
+				} else {
+					if (charType == "dns") {
+						mainCharacter.Role(dnsImg);
+					} else if (charType == "tot") {
+						mainCharacter.Role(totImg);
+					}
+					charDrawType = 0;
+				}
+			}
+		}
+	}
+	private void calEatTime() {
+		 if (eatTime < 1000) {
+		     eatTime += 1;
+		    } else {
+		     eatTime = 0;
+		     if (charType == "dns") {
+		      mainCharacter.Role(dnsImg);
+		     } else if (charType == "tot") {
+		      mainCharacter.Role(totImg);
+		     }
+		     charDrawType = 0;
+		     isEAT = false;
+		     dnsEV = false;
+		    }
 	}
 
 }

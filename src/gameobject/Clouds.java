@@ -87,4 +87,5 @@ public class Clouds {
 			cloud = Resource.getResouceImage("data/fly6.png");
 		}
 	}
+	
 }

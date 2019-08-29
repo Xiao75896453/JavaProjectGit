@@ -47,14 +47,15 @@ public class MainCharacter {
 		posX = 50;
 		posY = LAND_POSY;
 		rectBound = new Rectangle();
-		normalRunAnim = new Animation(90);
-		normalRunAnim.addFrame(Resource.getResouceImage("data/main-character1.png"));
-		normalRunAnim.addFrame(Resource.getResouceImage("data/main-character2.png"));
-		jumping = Resource.getResouceImage("data/main-character3.png");
-		downRunAnim = new Animation(90);
-		downRunAnim.addFrame(Resource.getResouceImage("data/main-character5.png"));
-		downRunAnim.addFrame(Resource.getResouceImage("data/main-character6.png"));
-		deathImage = Resource.getResouceImage("data/main-character4.png");
+		Role("data/main-character1.png","data/main-character2.png","data/main-character3.png","data/main-character4.png","data/main-character5.png","data/main-character6.png");
+//		normalRunAnim = new Animation(90);
+//		normalRunAnim.addFrame(Resource.getResouceImage("data/main-character1.png"));
+//		normalRunAnim.addFrame(Resource.getResouceImage("data/main-character2.png"));
+//		jumping = Resource.getResouceImage("data/main-character3.png");
+//		downRunAnim = new Animation(90);
+//		downRunAnim.addFrame(Resource.getResouceImage("data/main-character5.png"));
+//		downRunAnim.addFrame(Resource.getResouceImage("data/main-character6.png"));
+//		deathImage = Resource.getResouceImage("data/main-character4.png");
 
 		try {
 			jumpSound = Applet.newAudioClip(new URL("file", "", "data/jump.wav"));
@@ -207,7 +208,16 @@ public class MainCharacter {
 		downRunAnim.addFrame(Resource.getResouceImage(img5));
 		deathImage = Resource.getResouceImage(img4);
 	}
-
+	public void Role(String[] img) {
+		normalRunAnim = new Animation(90);
+		normalRunAnim.addFrame(Resource.getResouceImage(img[0]));
+		normalRunAnim.addFrame(Resource.getResouceImage(img[1]));
+		jumping = Resource.getResouceImage(img[2]);
+		downRunAnim = new Animation(90);
+		downRunAnim.addFrame(Resource.getResouceImage(img[5]));
+		downRunAnim.addFrame(Resource.getResouceImage(img[4]));
+		deathImage = Resource.getResouceImage(img[3]);
+	}
 	
 
 }
