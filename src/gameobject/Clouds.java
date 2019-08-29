@@ -21,29 +21,11 @@ public class Clouds {
 		listCloud = new ArrayList<ImageCloud>();
 
 		ImageCloud imageCloud = new ImageCloud();
-		imageCloud.posX = 0;
-		imageCloud.posY = 30;
-		listCloud.add(imageCloud);
-
-		imageCloud = new ImageCloud();
-		imageCloud.posX = 200;
-		imageCloud.posY = 40;
-		listCloud.add(imageCloud);
-
-		imageCloud = new ImageCloud();
-		imageCloud.posX = 400;
-		imageCloud.posY = 50;
-		listCloud.add(imageCloud);
-
+		makeCloud(imageCloud,0, 30);
+		makeCloud(imageCloud,200, 40);
+		makeCloud(imageCloud,400, 50);
+		makeCloud(imageCloud,600, 60);
 //		imageCloud = new ImageCloud();
-//		imageCloud.posX = 450;
-//		imageCloud.posY = 20;
-//		listCloud.add(imageCloud);
-
-		imageCloud = new ImageCloud();
-		imageCloud.posX = 600;
-		imageCloud.posY = 60;
-		listCloud.add(imageCloud);
 	}
 
 	public void update() {
@@ -88,4 +70,12 @@ public class Clouds {
 		}
 	}
 	
-}
+	public void makeCloud(ImageCloud imageCloud,int PosX, int PosY ) {
+		imageCloud = new ImageCloud();
+		imageCloud.posX = PosX;
+		imageCloud.posY = PosY;
+		listCloud.add(imageCloud);
+
+	}
+	}
+
