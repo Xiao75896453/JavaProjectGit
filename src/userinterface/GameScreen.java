@@ -79,7 +79,7 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		enemiesManager = new EnemiesManager(mainCharacter);
 		clouds = new Clouds(GameWindow.SCREEN_WIDTH, mainCharacter);
 		gameInstruction = new GameInstruction();
-		gameInstruction.setVisible(true);
+		gameInstruction.setVisible(false);
 		
 		
 		try {
