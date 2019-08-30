@@ -17,14 +17,14 @@ public class GameWindow extends JFrame {
 	
 	public static final int SCREEN_WIDTH = 600;
 	private GameScreen gameScreen;
-	
+	private static GameBackgroundMusic BGM;
 	public GameWindow() {
 		super("JavaProject");
 		setSize(SCREEN_WIDTH, 175);
 		setLocation(400, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
-		
+		BGM = new GameBackgroundMusic();
 		gameScreen = new GameScreen();
 		addKeyListener(gameScreen);
 		add(gameScreen);
@@ -36,7 +36,7 @@ public class GameWindow extends JFrame {
 	}
 	
 	public static void main(String args[])throws Exception {
-		GameBackgroundMusic BGM = new GameBackgroundMusic();
+		
 		BGM.setFile(new File("data/BGM.wav")).start();
 		(new GameWindow()).startGame();
 		Thread.sleep(3000);

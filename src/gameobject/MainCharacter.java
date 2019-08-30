@@ -25,7 +25,7 @@ public class MainCharacter {
 
 	private float posY;
 	private float posX;
-	private float speedX;
+	private static float speedX;
 	private float speedY;
 	private Rectangle rectBound;
 
@@ -68,7 +68,7 @@ public class MainCharacter {
 		}
 	}
 
-	public float getSpeedX() {
+	public static float getSpeedX() {
 		return speedX;
 	}
 

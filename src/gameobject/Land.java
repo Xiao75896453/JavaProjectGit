@@ -18,10 +18,10 @@ public class Land {
 	private BufferedImage land2;
 	private BufferedImage land3;
 	
-	private MainCharacter mainCharacter;
+//	private MainCharacter mainCharacter;
 	
 	public Land(int width, MainCharacter mainCharacter) {
-		this.mainCharacter = mainCharacter;
+//		this.mainCharacter = mainCharacter;
 		land1 = Resource.getResouceImage("data/land1.png");
 		land2 = Resource.getResouceImage("data/land2.png");
 		land3 = Resource.getResouceImage("data/land3.png");
@@ -38,7 +38,8 @@ public class Land {
 	public void update(){
 		Iterator<ImageLand> itr = listLand.iterator();
 		ImageLand firstElement = itr.next();
-		firstElement.posX -= mainCharacter.getSpeedX();
+//		firstElement.posX -= mainCharacter.getSpeedX();
+		firstElement.posX -= MainCharacter.getSpeedX();
 		float previousPosX = firstElement.posX;
 		while(itr.hasNext()) {
 			ImageLand element = itr.next();

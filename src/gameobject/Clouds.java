@@ -13,10 +13,10 @@ public class Clouds {
 	private List<ImageCloud> listCloud;
 	private BufferedImage cloud;
 
-	private MainCharacter mainCharacter;
+//	private MainCharacter mainCharacter;
 
-	public Clouds(int width, MainCharacter mainCharacter) {
-		this.mainCharacter = mainCharacter;
+	public Clouds(int width) {
+//		this.mainCharacter = mainCharacter;
 		cloud = Resource.getResouceImage("data/fly1.png");
 		listCloud = new ArrayList<ImageCloud>();
 
@@ -31,10 +31,12 @@ public class Clouds {
 	public void update() {
 		Iterator<ImageCloud> itr = listCloud.iterator();
 		ImageCloud firstElement = itr.next();
-		firstElement.posX -= mainCharacter.getSpeedX() / 8;
+//		firstElement.posX -= mainCharacter.getSpeedX() / 8;
+		firstElement.posX -= MainCharacter.getSpeedX() / 8;
 		while (itr.hasNext()) {
 			ImageCloud element = itr.next();
-			element.posX -= mainCharacter.getSpeedX() / 8;
+//			element.posX -= mainCharacter.getSpeedX() / 8;
+			element.posX -= MainCharacter.getSpeedX() / 8;
 		}
 		if (firstElement.posX < -cloud.getWidth()) {
 			listCloud.remove(firstElement);

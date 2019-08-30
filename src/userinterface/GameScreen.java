@@ -77,9 +77,9 @@ public class GameScreen extends JPanel implements Runnable, KeyListener {
 		replayButtonImage = Resource.getResouceImage("data/replay_button.png");
 		gameOverButtonImage = Resource.getResouceImage("data/gameover_text.png");
 		enemiesManager = new EnemiesManager(mainCharacter);
-		clouds = new Clouds(GameWindow.SCREEN_WIDTH, mainCharacter);
+		clouds = new Clouds(GameWindow.SCREEN_WIDTH);
 		gameInstruction = new GameInstruction();
-		gameInstruction.setVisible(false);
+		gameInstruction.setVisible(true);
 		
 		
 		try {

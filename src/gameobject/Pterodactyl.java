@@ -16,21 +16,22 @@ public class Pterodactyl extends Enemy {
 	private int height;
 	
 	private Animation image;
-	private MainCharacter mainCharacter;
+//	private MainCharacter mainCharacter;
 	
 	private Rectangle rectBound;
 	
-	public Pterodactyl(MainCharacter mainCharacter, int posX, int width, int height, Animation pterodactyl) {
+	public Pterodactyl( int posX, int width, int height, Animation pterodactyl) {
 		this.posX = posX;
 		this.width = width;
 		this.height = height;
 		this.image = pterodactyl;
-		this.mainCharacter = mainCharacter;
+//		this.mainCharacter = mainCharacter;
 		rectBound = new Rectangle();
 	}
 	
 	public void update() {
-		posX -= mainCharacter.getSpeedX();
+//		posX -= mainCharacter.getSpeedX();
+		posX -= MainCharacter.getSpeedX();
 	}
 	
 	public void draw(Graphics g) {

@@ -61,14 +61,14 @@ public class EnemiesManager {
 		// if (enemyType = getRandom)
 		int type = rand.nextInt(4);
 		if (type == 0) {
-			return new Cactus(mainCharacter, 800, cactus1.getWidth() - 10, cactus1.getHeight() - 10, cactus1);
+			return new Cactus( 800, cactus1.getWidth() - 10, cactus1.getHeight() - 10, cactus1);
 		} else if (type == 1) {
-			return new Cactus(mainCharacter, 800, cactus2.getWidth() - 10, cactus2.getHeight() - 10, cactus2);
+			return new Cactus( 800, cactus2.getWidth() - 10, cactus2.getHeight() - 10, cactus2);
 		} else if (type == 2) {
-			return new Pterodactyl(mainCharacter, 800, pterodactyl.getFrame().getWidth() - 10,
+			return new Pterodactyl( 800, pterodactyl.getFrame().getWidth() - 10,
 					pterodactyl.getFrame().getHeight() - 10, pterodactyl);
 		} else {
-			return new Food(mainCharacter, 800, food.getWidth() - 10, food.getHeight() - 10, food);
+			return new Food( 800, food.getWidth() - 10, food.getHeight() - 10, food);
 		}
 //		 else {
 //			 return new Pterodactyl(mainCharacter, 800, pterodactyl.getFrame().getWidth() - 10,pterodactyl.getFrame().getHeight() - 10, pterodactyl);
