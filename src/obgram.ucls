@@ -10,16 +10,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="gameobject.Clouds" project="JavaProject" 
-    file="/JavaProject/src/gameobject/Clouds.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="92" x="726" y="238"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="gameobject.EnemiesManager" project="JavaProject" 
+  <class id="2" language="java" name="gameobject.EnemiesManager" project="JavaProject" 
     file="/JavaProject/src/gameobject/EnemiesManager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="53" width="123" x="192" y="238"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -28,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="gameobject.Enemy" project="JavaProject" 
+  <class id="3" language="java" name="gameobject.Enemy" project="JavaProject" 
     file="/JavaProject/src/gameobject/Enemy.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="53" width="119" x="193" y="458"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -37,7 +28,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="gameobject.Food" project="JavaProject" 
+  <class id="4" language="java" name="gameobject.Food" project="JavaProject" 
     file="/JavaProject/src/gameobject/Food.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="53" width="114" x="62" y="327"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -46,25 +37,16 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="gameobject.Land" project="JavaProject" 
-    file="/JavaProject/src/gameobject/Land.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="104" x="607" y="238"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="gameobject.MainCharacter" project="JavaProject" 
+  <class id="5" language="java" name="gameobject.MainCharacter" project="JavaProject" 
     file="/JavaProject/src/gameobject/MainCharacter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="54" width="127" x="417" y="238"/>    
+    <position height="53" width="125" x="417" y="238"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="gameobject.Pterodactyl" project="JavaProject" 
+  <class id="6" language="java" name="gameobject.Pterodactyl" project="JavaProject" 
     file="/JavaProject/src/gameobject/Pterodactyl.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="53" width="113" x="336" y="328"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -73,210 +55,219 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="userinterface.GameInstruction" project="JavaProject" 
+  <class id="7" language="java" name="userinterface.GameInstruction" project="JavaProject" 
     file="/JavaProject/src/userinterface/GameInstruction.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="124" x="62" y="125"/>    
+    <position height="53" width="124" x="151" y="125"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="userinterface.GameScreen" project="JavaProject" 
+  <class id="8" language="java" name="userinterface.GameScreen" project="JavaProject" 
     file="/JavaProject/src/userinterface/GameScreen.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="143" x="320" y="125"/>    
+    <position height="53" width="143" x="409" y="125"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="userinterface.GameWindow" project="JavaProject" 
+  <class id="9" language="java" name="userinterface.GameWindow" project="JavaProject" 
     file="/JavaProject/src/userinterface/GameWindow.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="111" x="336" y="24"/>    
+    <position height="53" width="111" x="425" y="24"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="util.Animation" project="JavaProject" file="/JavaProject/src/util/Animation.java" 
+  <class id="10" language="java" name="util.Animation" project="JavaProject" file="/JavaProject/src/util/Animation.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="118" x="539" y="459"/>    
+    <position height="53" width="118" x="505" y="459"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="util.Resource" project="JavaProject" file="/JavaProject/src/util/Resource.java" 
+  <class id="11" language="java" name="util.Resource" project="JavaProject" file="/JavaProject/src/util/Resource.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="54" width="124" x="674" y="458"/>    
+    <position height="54" width="124" x="640" y="458"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="userinterface.GameBackgroundMusic" project="JavaProject" 
+  <class id="12" language="java" name="userinterface.GameBackgroundMusic" project="JavaProject" 
     file="/JavaProject/src/userinterface/GameBackgroundMusic.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="53" width="160" x="510" y="126"/>    
+    <position height="53" width="160" x="599" y="126"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="15">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="13"/>  
+  <class id="13" language="java" name="gameobject.Clouds" project="JavaProject" 
+    file="/JavaProject/src/gameobject/Clouds.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="122" x="641" y="238"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="11"/>  
   </dependency>  
-  <association id="16">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="17" name="enemiesManager">        
+  <association id="15">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="16" name="enemiesManager">        
         <position height="0" width="0" x="-149" y="133"/>      
       </attribute>      
-      <multiplicity id="18" minimum="0" maximum="1">        
+      <multiplicity id="17" minimum="0" maximum="1">        
         <position height="0" width="0" x="-149" y="133"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="18">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="19" name="enemies">        
+        <position height="0" width="0" x="151" y="169"/>      
+      </attribute>      
+      <multiplicity id="20" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="151" y="169"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="19">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="20" name="enemies">        
-        <position height="0" width="0" x="151" y="169"/>      
-      </attribute>      
-      <multiplicity id="21" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="151" y="169"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="22">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="13"/>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="23">    
+  <generalization id="22">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="4"/>  
+    <end type="TARGET" refId="3"/>  
   </generalization>  
-  <dependency id="25">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="5"/>  
+  <association id="23">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="24" name="clouds"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
   </dependency>  
-  <association id="26">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="27" name="gameInstruction">        
-        <position height="0" width="0" x="-787" y="107"/>      
+  <association id="27">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="28" name="gameInstruction">        
+        <position height="0" width="0" x="-698" y="107"/>      
       </attribute>      
-      <multiplicity id="28" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-787" y="107"/>      
+      <multiplicity id="29" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-698" y="107"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="29">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="30" name="BGM">        
-        <position height="0" width="0" x="0" y="0"/>      
+  <association id="30">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="31" name="BGM">        
+        <position height="0" width="0" x="89" y="0"/>      
       </attribute>      
-      <multiplicity id="31" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="32" minimum="0" maximum="1">        
+        <position height="0" width="0" x="89" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="32">    
-    <end type="SOURCE" refId="3"/>    
+  <dependency id="33">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="33">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <association id="34">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="35" name="pterodactyl">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="37">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="38" name="normalRunAnim">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="39" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="40">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="41" name="image">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="42" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <dependency id="44">    
+  <dependency id="34">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="13"/>  
+    <end type="TARGET" refId="6"/>  
   </dependency>  
-  <generalization id="45">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="46">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="47" name="downRunAnim">        
-        <position height="0" width="0" x="0" y="0"/>      
+  <association id="35">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="36" name="pterodactyl">        
+        <position height="0" width="0" x="-34" y="0"/>      
       </attribute>      
-      <multiplicity id="48" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="49">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="50" name="gameScreen">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="51" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+      <multiplicity id="37" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-34" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="39" name="normalRunAnim">        
+        <position height="0" width="0" x="-34" y="0"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-34" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="42" name="image">        
+        <position height="0" width="0" x="-34" y="0"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-34" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="46">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="47" name="downRunAnim">        
+        <position height="0" width="0" x="-34" y="0"/>      
+      </attribute>      
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-34" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="50" name="gameScreen">        
+        <position height="0" width="0" x="89" y="0"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1">        
+        <position height="0" width="0" x="89" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="52">    
-    <end type="SOURCE" refId="10" navigable="false">      
+    <end type="SOURCE" refId="8" navigable="false">      
       <attribute id="53" name="mainCharacter">        
         <position height="0" width="0" x="-139" y="-174"/>      
       </attribute>      
@@ -284,11 +275,11 @@
         <position height="0" width="0" x="-139" y="-174"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="55">    
-    <end type="SOURCE" refId="3" navigable="false">      
+    <end type="SOURCE" refId="2" navigable="false">      
       <attribute id="56" name="mainCharacter">        
         <position height="0" width="0" x="-139" y="-174"/>      
       </attribute>      
@@ -296,9 +287,13 @@
         <position height="0" width="0" x="-139" y="-174"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <dependency id="58">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

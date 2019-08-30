@@ -12,7 +12,6 @@ import util.Resource;
 public class Clouds {
 	private List<ImageCloud> listCloud;
 	private BufferedImage cloud;
-
 //	private MainCharacter mainCharacter;
 
 	public Clouds(int width) {
